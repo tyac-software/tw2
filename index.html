@@ -790,7 +790,10 @@
     <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
     <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
     <script>
+        const socket = io('');
+
         function submitForm() {
             var name = document.getElementById("rname").value;
             var email = document.getElementById("remail").value;
@@ -803,15 +806,8 @@
             }
 
             console.log(out)
-        
-            	
-            $.ajax({
-                url: '/formSubmit',
-                type: 'POST',
-                contentType: 'application/json',
-                data: JSON.stringify(out),
-                success: function(response){ }
-        });
+            socket.emit('submitForm', out);
+            
     }
     
         
