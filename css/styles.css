@@ -57,6 +57,7 @@ body, p {
 
 .p-large {
 	font: 400 1rem/1.5rem "Raleway", sans-serif;
+	font-size: 18px;
 }
 
 .p-small {
@@ -65,6 +66,8 @@ body, p {
 
 .p-heading {
 	margin-bottom: 3.875rem;
+	font-size: 25px;
+	line-height: 30px;
 }
 
 .li-space-lg li {
@@ -1880,8 +1883,8 @@ a:hover.back-to-top {
 	}
 
 	.cards-1 .col-lg-12 div.card:nth-child(3n+2) {
-		margin-right: 2rem;
-		margin-left: 2rem;
+		margin-right: 1.5rem;
+		margin-left: 1.5rem;
 	}
 	/* end of services */
 
